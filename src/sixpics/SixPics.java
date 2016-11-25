@@ -62,49 +62,7 @@ public class SixPics extends Application {
         
         AllImages1DIn2D(AllImages1D, People, imagesEach);
         
-//        //Put all images out of the files and place them into a 2D array as 1D each
-//        int count = 0;
-//        int row = 0;
-//        //GO THROUGH EACH PERSON 
-//        for (int j = 0; j < People.length; j++)
-//        {               
-//            if (row < imagesEach*People.length) 
-//            //GO THROUCH EACH PICTURE OF PERSON
-//            for (int p = 0; p < imagesEach; p++)
-//            {
-//                //CREATE NEW GRAYIMAGE AS BYTE 
-//                byte[][] grayByteData = new byte[128][128];
-//                BufferedImage inImages = 
-//                ImageIo.readImage
-//                ("src/Pics/capturedimages/"+ People[j]+ "/saved/capturedImage"+p+".jpg");
-//
-//                BufferedImage grayImage =ImageIo.toGray(inImages);   
-//                
-//                //BuffinImages[p] = grayImage;
-//                
-//                
-//                
-//                grayByteData= ImageIo.getGrayByteImageArray2DFromBufferedImage(grayImage);
-//                
-//                //TURN 2D GRAY BYTE OF EACH IMAGE INTO 1D OF 2D ONE IMAGE AT A TIME
-//                for (int x = 0; x < grayByteData.length; x++)
-//                {
-//                    for (int y = 0; y < grayByteData[0].length; y++)
-//                    {
-//                       AllImages1D[row][count] = (double)(grayByteData[y][x] & 0xff);
-//                       //System.out.println("VALUE FROM GRAYBYTE " + AllImages1D[row][count]);
-//                       count++;                                            
-//                    }
-//                }
-//                row++;
-//                if (count == (grayByteData.length * grayByteData[0].length))
-//                {
-//                    count = 0;
-//                }             
-//            }            
-//        }
-//        
-//        
+
 
             
   
