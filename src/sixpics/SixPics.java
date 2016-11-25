@@ -57,59 +57,12 @@ public class SixPics extends Application {
        //Matrix2D M2DBuffedTransposed = new Matrix2D[72];
         double[] ImageColAverage = new double [16384];        
         double[][] AllImages1D = new double[imagesEach*People.length][16384];
-        
-        
-        
-        AllImages1DIn2D(AllImages1D, People, imagesEach);
-        
+
+        AllImages1DIn2D(AllImages1D, People, imagesEach);        
+        GetColumAverages(ImageColAverage ,AllImages1D);
 
 
-            
-  
-        
-        //Get the average of the colomns 
-        
-//        for (int c = 0; c < AllImages1D[0].length; c++)
-//        {
-//            double avg = 10;
-//
-//            
-//            for (int r = 0; r < AllImages1D.length; r++)
-//            {
-//                
-//                avg += AllImages1D[r][c] ; 
-//                
-//            } 
-//            
-//            //System.out.println(c+"\nCol  Average = "+ avg);
-//            ImageColAverage[c] = Math.abs(avg);
-//        }
-//        
-//       
-//        for (int i = 0 ; i < ImageColAverage.length; i++)
-//            ImageColAverage[i] = ImageColAverage[i]/AllImages1D.length;
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        double [] temp = Double2DToDouble1D(AllImages1D);
+        //PRINTING IMAGE OF ALL AVERATES
         BufferedImage outImage = ImageIo.setGrayByteImageArray2DToBufferedImage(Double1DToByte2D(ImageColAverage));
         ImageIo.writeImage(outImage, "jpg", "ALLAVERAGE.jpg");
             
